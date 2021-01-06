@@ -16,11 +16,14 @@ PokemonGame
 │   │  ├─font
 │   │  ├─Pic
 │   │  └─SkillsImage
-│   └─src                           //源文件
+│   ├─hidingMode                    //三种模式，入口为offlineMode
+│   ├─offlineMode
+│   └─onlineMode
 ├─tags                              //历史版本存放
 └─branches
     ├─Server                        //远程服务器使用的脚本
-    └─SVNTotor                      //SVN教学
+    ├─SVNTotor                      //SVN教学
+    └─Video                         //四种模式的演示视频
 ```
 
 ### 游戏操作
