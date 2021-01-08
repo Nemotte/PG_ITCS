@@ -13,6 +13,7 @@ class Knock(object):
         self.name = "撞击"
         self.attribute = '普通'
         self.damage = 20
+        self.normalDam = 20
         self.skillType = 0
         self.maxPP = 25
         self.nowPP = 25
@@ -56,6 +57,7 @@ class ShadowBall(object):
         self.name = "影子球"
         self.attribute = '暗'
         self.damage = 20
+        self.normalDam = 20
         self.skillType = 0
         self.maxPP = 15
         self.nowPP = 15
@@ -140,6 +142,8 @@ class Powerup(object):
         self.name = "力量提升"
         self.attribute = '格斗'
         self.damage = 0
+        self.normalDam = 0
+
         self.skillType = 1
         self.maxPP = 15
         self.nowPP = 15
@@ -187,6 +191,8 @@ class Lightning(object):
         self.name = "雷击"
         self.attribute = '电'
         self.damage = 60
+        self.normalDam = 60
+
         self.skillType = 0
         self.maxPP = 10
         self.nowPP = 10
@@ -242,6 +248,8 @@ class FireBeam(object):
         self.name = "大字爆"
         self.attribute = '火'
         self.damage = 125
+        self.normalDam = 125
+
         self.skillType = 0
         self.maxPP = 5
         self.nowPP = 5
@@ -365,6 +373,8 @@ class Kirin(object):
         self.name = "麒麟"
         self.attribute = '电'
         self.damage = 150
+        self.normalDam = 150
+
         self.skillType = 0
         self.maxPP = 5
         self.nowPP = 5
@@ -522,6 +532,8 @@ class Tsunami(object):
         self.name = "海啸"
         self.attribute = '水'
         self.damage = 100
+        self.normalDam = 100
+
         self.skillType = 0
         self.maxPP = 5
         self.nowPP = 5
@@ -564,7 +576,8 @@ class Tsunami(object):
                               (1 + self.damage / 100) * \
                               (1 - (self.target.defence / (100 + self.target.defence)))
         self.target.health = round(self.target.health, 2)
-
+        if self.target.health < 0:
+            self.target.health = 0
 
 class Hypnotism(object):
     def __init__(self, p_setting, screen, menubar):
@@ -575,6 +588,8 @@ class Hypnotism(object):
         self.name = "催眠术"
         self.attribute = '超能'
         self.damage = 0
+        self.normalDam = 0
+
         self.skillType = 0
         self.maxPP = 15
         self.nowPP = 15
@@ -639,6 +654,8 @@ class Protection(object):
         self.name = "保护"
         self.attribute = '普通'
         self.damage = 0
+        self.normalDam = 0
+
         self.skillType = 0
         self.maxPP = 10
         self.nowPP = 10
@@ -687,6 +704,8 @@ class FireKick(object):
         self.name = "火焰踢"
         self.attribute = '火'
         self.damage = 140
+        self.normalDam = 140
+
         self.skillType = 0
         self.maxPP = 5
         self.nowPP = 5
@@ -740,6 +759,8 @@ class DragonClaw(object):
         self.name = "龙之爪"
         self.attribute = '龙'
         self.damage = 85
+        self.normalDam = 85
+
         self.skillType = 0
         self.maxPP = 15
         self.nowPP = 15
@@ -837,6 +858,8 @@ class SabreDance(object):
         self.name = "剑舞"
         self.attribute = '普通'
         self.damage = 0
+        self.normalDam = 0
+
         self.skillType = 0
         self.maxPP = 15
         self.nowPP = 15
@@ -915,6 +938,8 @@ class BulletFist(object):
         self.name = "子弹拳"
         self.attribute = '格斗'
         self.damage = 60
+        self.normalDam = 60
+
         self.skillType = 0
         self.maxPP = 25
         self.nowPP = 25
@@ -970,6 +995,8 @@ class Yeokrin(object):
         self.name = "逆鳞"
         self.attribute = '龙'
         self.damage = 150
+        self.normalDam = 150
+
         self.skillType = 0
         self.maxPP = 10
         self.nowPP = 10
@@ -1173,6 +1200,7 @@ class Waterfall(object):
         self.name = "攀瀑"
         self.attribute = '水'
         self.damage = 120
+        self.normalDam = 120
         self.skillType = 0
         self.maxPP = 10
         self.nowPP = 10
@@ -1274,6 +1302,7 @@ class IceBeam(object):
         self.name = "急冻光束"
         self.attribute = '冰'
         self.damage = 90
+        self.normalDam = 90
         self.skillType = 0
         self.maxPP = 15
         self.nowPP = 15
@@ -1389,6 +1418,7 @@ class Splash(object):
         self.name = "水溅跃"
         self.attribute = '水'
         self.damage = 0
+        self.normalDam = 0
         self.skillType = 0
         self.maxPP = 25
         self.nowPP = 25

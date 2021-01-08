@@ -8,13 +8,14 @@ class UpgradeHp():
         self.image = pygame.image.load("../othersource/Pic/prizeImages/血量提升药水.png")
         self.rect = self.image.get_rect()
         self.pokemons = pokemons.myPokemon01s  # 使用buff的pokemons
-        self.screen = screen
-        self.isPos = True  # 是正面buff
+        self.screen = screen    
+        self.flag = 0                   # 0:对mypokemon01s操作；1：对enemyPokemon02s操作
         self.name = "血量提升药水"
         self.price = 100   # 商店中售卖价格 具体数字待定
     def useBuff(self):
         for pokemon in self.pokemons:
             pokemon.maxHealth += int(pokemon.maxHealth * 0.05)
+            pokemon.health += int(pokemon.health * 0.05)
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
@@ -34,7 +35,7 @@ class UpgradeAtt():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons.myPokemon01s  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = True  # 是正面buff
+        self.flag = 0  # 是正面buff
         self.name = "攻击提升药水"
         self.price = 120
 
@@ -60,7 +61,7 @@ class UpgradeDam():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = True  # 是正面buff
+        self.flag = 0  # 是正面buff
         self.name = "技能强化药水"
         self.price = 120
 
@@ -86,7 +87,7 @@ class UpgradeDef():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons.myPokemon01s  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = True  # 是正面buff
+        self.flag = 0  # 是正面buff
         self.name = "防御提升药水"
         self.price = 130
 
@@ -112,7 +113,7 @@ class HealAll():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons.myPokemon01s  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = True  # 是正面buff
+        self.flag = 0  # 是正面buff
         self.name = "全满药"
         self.price = 200
 
@@ -140,7 +141,7 @@ class UpgradeStr():
         self.skills = skills
         self.effSkills = ['力量提升', "剑舞"]  # 该buff有效的技能
         self.screen = screen
-        self.isPos = True  # 是正面buff
+        self.flag = 0  # 是正面buff
         self.name = "强化提升药水"
         self.price = 80
 
@@ -168,7 +169,7 @@ class DegradeHp():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = False  # 是负面buff
+        self.flag = 1  # 是负面buff
         self.name = "失血药剂"
         self.price = 150
 
@@ -195,7 +196,7 @@ class DegradeAtt():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = False  # 是负面buff
+        self.flag = 1  # 是负面buff
         self.name = "攻击弱化药剂"
         self.price = 200
 
@@ -223,7 +224,7 @@ class DegradeDef():
         self.rect = self.image.get_rect()
         self.pokemons = pokemons  # 使用buff的pokemons
         self.screen = screen
-        self.isPos = False  # 是负面buff
+        self.flag = 1  # 是负面buff
         self.name = "防御破除药剂"
         self.price = 200
 
@@ -251,7 +252,7 @@ class CoinsPrize():
         self.rect = self.image.get_rect()
         self.screen = screen
         # self.coins = coins
-        self.isPos = True  # 是正面buff
+        self.flag = 0  # 是正面buff
         self.name = "100 金币奖励"
 
     def useBuff(self):

@@ -146,8 +146,12 @@ def drawGetCoins(screen, level, coins, clock):
     return coins
 
 
-def choosePrize(screen, prizes, myPokemon01s, coins, clock):
+def choosePrize(screen, prizes, myPokemon01s, enemyPokemon02s, coins, clock):
     tempPrizes = random.sample(prizes, 3)
+    # 更新奖励作用的bossPokemon
+    for prize in tempPrizes:
+        if prize.flag:
+            prize.pokemons=enemyPokemon02s
     prizePointer = PrizePointer(screen)
     prizePos = ((102, 123), (249, 123), (395, 123))  # 存放绘制奖励的位置信息（center坐标）
     prizeBg = pygame.image.load("../othersource/Pic/selectPrize_bg.jpg")
@@ -262,7 +266,7 @@ def drawNextLevel(screen, level, myPokemon01s, coins, clock):
         
         screen.blit(nextLevelImage, (0, 0))
         drawCoins(screen, coins)
-        draw_text(screen, "../othersource/font/迷你简剪纸.TTF", 40, "进入第%d关" % (level), (160, 140), (74, 73, 74))
+        draw_text(screen, "../othersource/font/迷你简剪纸.TTF", 55, "%d" % (level), (305, 130), (74, 73, 74))
         pygame.display.update()
         clock.tick_busy_loop(400) 
         for event in pygame.event.get():
@@ -294,7 +298,6 @@ def checkPokemon01s(screen, myPokemon01s, clock):
     skillPos = [(220, 183), (360, 183), (220, 244), (360, 244)]
     swap = []
     while True:
-        
         pointedPokemon = myPokemon01s[checkPokemon01sPointer.flag]  # 此时指针指向的pokemon
         screen.blit(playerPokemonsImage, (0, 0))
         for i in range(len(myPokemon01s)):
@@ -338,7 +341,7 @@ def checkPokemon01s(screen, myPokemon01s, clock):
                         myPokemon01s[swap[1]] = temp
                         swap.pop()
                         swap.pop()
-                        pygame.display.update()
+                        # pygame.display.update()
                 elif event.key == ord("b"):
                     # del checkPokemon01sPointer
                     return 
@@ -353,7 +356,7 @@ def selectPokemonBetFight(p_setting, screen, opt_pokemon01s, selectionPointer, m
         selectionPointer.blitme()
         drawCoins(screen, coins)
         if selection:
-            if selection%2:
+            if selection==1:
                 screen.blit(pygame.image.load("../othersource/Pic/tick.png"), (135, 201))
 
             else:
@@ -370,6 +373,7 @@ def selectPokemonBetFight(p_setting, screen, opt_pokemon01s, selectionPointer, m
                     if selection==None:
                         selection = selectionPointer.flag+1
                     elif (selectionPointer.flag == selection-1):
+                        # 重复选择 作取消
                         selection = None
                     else:
                         selection = selectionPointer.flag+1
@@ -378,6 +382,9 @@ def selectPokemonBetFight(p_setting, screen, opt_pokemon01s, selectionPointer, m
                     if (selection):
                         myPokemon01s.append(opt_pokemon01s[selection-1])
                         screen.blit(p_setting.loadPage[num], (0, 0))
+                        # drawCoins(screen, coins)
+                        draw_text(screen, "../othersource/font/SiYuanMedium.otf", 12, str(coins), (227, 280),
+                                  (200, 200, 200))
                         draw_text(screen, p_setting.mainFont, 13, "已选择 %s" % opt_pokemon01s[selection-1].name, (185, 137),
                                   (100, 100, 100))
                         draw_text(screen, p_setting.mainFont, 13, "游戏马上开始...", (185, 157), (100, 100, 100))
@@ -395,10 +402,6 @@ def selectPokemonBetFight(p_setting, screen, opt_pokemon01s, selectionPointer, m
                         pygame.time.delay(1500)
 
                 elif event.key == pygame.K_LEFT:
-                    # selected = False
-
                     selectionPointer.moveLeft()
                 elif event.key == pygame.K_RIGHT:
-                    # selected = False
-
                     selectionPointer.moveRight()

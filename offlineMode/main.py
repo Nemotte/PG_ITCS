@@ -189,12 +189,12 @@ def main():
     '''
     # 创建 我方裂空座
     Rayquaza01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Rayquaza01.png", "../othersource/Pic/headPortraits/Rayquaza01.png", 1, '裂空座',
-                         400, 400, 120, 100, 150, 0, 70, 70, 80)
+                         400, 400, 150, 100, 150, 0, 60, 70, 80)
     Rayquaza01.orderPos = (174, 110)
 
     # 创建 野生裂空座
     Rayquaza02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Rayquaza02.png", None,  2, '裂空座',
-                         900, 900, 130, 100, 150, 0, 70, 637, 10)
+                         900, 900, 160, 107, 150, 0, 70, 637, 10)
 
     # 创建 技能组 对象
     Rayquaza01.skills = (dragonClaw01, sabreDance01, yeokrin01, kirin01)
@@ -209,10 +209,10 @@ def main():
     '''
     # 创建 我方火鸡战士
     Blaziken01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Blaziken01.png", "../othersource/Pic/headPortraits/Blaziken01.png", 1, '火鸡战士',
-                         400, 400, 120, 100, 150, 0, 20, 70, 80)
+                         400, 400, 128, 83, 150, 0, 50, 60, 80)
     Blaziken01.orderPos = (298, 110)
 
-    # 创建 野生火鸡战士
+    # 创建 野生火鸡战士（未作为BOSS）
     Blaziken02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Blaziken02.png", None,  2, '火鸡战士',
                          400, 400, 120, 100, 150, 0, 20, 637, 10)
 
@@ -229,7 +229,7 @@ def main():
     '''
     # 创建 野生炎帝
     Entei02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Entei02.png", None,  2, '炎帝',
-                      400, 400, 120, 100, 150, 0, 20, 637, 10)
+                      400, 400, 122, 101, 150, 0, 80, 637, 10)
 
     # # 创建 我方炎帝     无图
     # Entei01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Entei01.png", 1, '炎帝',
@@ -248,7 +248,7 @@ def main():
     '''
     # 创建 野生灾兽
     Absol02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Absol02.png", None,  2, '灾兽',
-                      400, 400, 120, 100, 150, 0, 20, 637, 10)
+                      400, 400, 128, 71, 150, 0, 20, 637, 10)
 
     # # 创建 我方灾兽     无图
     # Absol01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Absol01.png", 1, '灾兽',
@@ -272,7 +272,7 @@ def main():
 
     # 创建 野生闪电鸟
     Zapdos02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Zapdos02.png", None,  2, '闪电鸟',
-                       400, 400, 120, 100, 150, 0, 20, 637, 10)
+                       400, 400, 122, 101, 150, 0, 80, 637, 10)
 
     # 创建 技能组 对象
     Zapdos01.skills = (kirin01, fireBeam01, powerup01, lightning01)
@@ -287,7 +287,7 @@ def main():
     '''
     # 创建 我方巨钳螳螂
     Scizor01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Scizor01.png",  "../othersource/Pic/headPortraits/Scizor01.png", 1, '巨钳螳螂',
-                       400, 400, 120, 100, 150, 0, 20, 70, 80)
+                       400, 400, 140, 133, 150, 0, 50, 70, 80)
     Scizor01.orderPos = (50, 191)
 
     # 创建 野生巨钳螳螂
@@ -307,7 +307,7 @@ def main():
     '''
     # 创建 野生九尾
     Ninetails02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Ninetails02.png", None,  2, '九尾',
-                          400, 400, 120, 100, 150, 0, 20, 637, 10)
+                          400, 400, 80, 89, 150, 0, 80, 637, 10)
 
     # # 创建 我方九尾     无图
     # Ninetails01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Ninetails01.png", 1, '九尾',
@@ -326,7 +326,7 @@ def main():
     '''
     # 创建 野生超梦
     Mewtwo02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Mewtwo02.png",  None, 2, '超梦',
-                       4000, 4000, 120, 100, 150, 0, 20, 637, 10)
+                       4000, 4000, 181, 101, 150, 0, 100, 637, 10)
 
     # # 创建 我方超梦 无图
     # Mewtwo01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Mewtwo01.png", 1, '超梦',
@@ -364,7 +364,7 @@ def main():
     '''
     # 创建 我方暴鲤龙
     Gyarados01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Gyarados01.png", "../othersource/Pic/headPortraits/Gyarados01.png", 1, '暴鲤龙',
-                         400, 400, 120, 100, 150, 0, 20, 70, 80)
+                         400, 400, 110, 96, 150, 0, 20, 70, 80)
     Gyarados01.orderPos = (174, 191)
 
     # 创建 野生暴鲤龙
@@ -384,12 +384,12 @@ def main():
     '''
     # 创建 我方古拉顿
     Groudon01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Groudon01.png", "../othersource/Pic/headPortraits/Groudon01.png", 1, '古拉顿',
-                        400, 400, 120, 100, 150, 0, 20, 70, 80)
+                        400, 400, 176, 178, 150, 0, 80, 70, 80)
     Groudon01.orderPos = (298, 191)
 
     # 创建 野生古拉顿
     Groudon02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Groudon02.png",  None, 2, '古拉顿',
-                        900, 900, 120, 100, 150, 0, 20, 637, 10)
+                        900, 900, 150, 160, 150, 0, 50, 637, 10)
 
     # 创建 技能组 对象
     Groudon01.skills = (fireKick01, fireBeam01, powerup01, protection01)
@@ -408,7 +408,7 @@ def main():
 
     # 创建 我方沙奈朵
     Gardevoir01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Gardevoir01.png", "../othersource/Pic/headPortraits/Gardevoir01.png",  1, '沙奈朵',
-                          400, 400, 120, 100, 150, 0, 100, 70, 80)
+                          400, 400, 80, 77, 150, 0, 40, 70, 80)
     Gardevoir01.orderPos = (422, 191)
 
     # 创建 技能组 对象
@@ -424,7 +424,7 @@ def main():
     '''
     # 创建 野生沙漠蜻蜓
     Flygon02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Flygon02.png",  None, 2, '沙漠蜻蜓',
-                       400, 400, 120, 100, 150, 0, 20, 637, 10)
+                       400, 400, 107, 95, 150, 0, 40, 637, 10)
 
     # # 创建 我方沙漠蜻蜓   无图
     # Flygon01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Flygon01.png", 1, '沙漠蜻蜓',
@@ -443,12 +443,12 @@ def main():
     '''
     # 创建 我方喷火龙
     Charizard01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Charizard01.png", "../othersource/Pic/headPortraits/Charizard01.png", 1, '喷火龙',
-                          400, 400, 120, 100, 150, 0, 20, 70, 80)
+                          400, 400, 90, 105, 150, 0, 20, 70, 80)
     Charizard01.orderPos = (50, 272)
 
     # 创建 野生喷火龙
     Charizard02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Charizard02.png", None,  2, '喷火龙',
-                          400, 400, 120, 100, 150, 0, 20, 637, 10)
+                          400, 400, 100, 100, 150, 0, 30, 637, 10)
 
     # 创建 技能组 对象
     Charizard01.skills = (knock01, fireBeam01, powerup01, dragonClaw01)
@@ -463,12 +463,12 @@ def main():
     '''
     # 创建 我方急冻鸟
     Articuno01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Articuno01.png", "../othersource/Pic/headPortraits/Articuno01.png", 1, '急冻鸟',
-                         400, 400, 120, 100, 150, 0, 100, 70, 80)
+                         400, 400, 78, 102, 150, 0, 50, 70, 80)
     Articuno01.orderPos = (174, 272)
 
     # 创建 野生急冻鸟
     Articuno02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Articuno02.png", None,  2, '急冻鸟',
-                         500, 500, 120, 100, 150, 0, 100, 637, 0)
+                         500, 500, 91, 109, 150, 0, 80, 637, 0)
 
     # 创建 技能组 对象
     Articuno01.skills = (dragonClaw01, kirin01, iceBeam01, lightning01)
@@ -479,12 +479,12 @@ def main():
     '''
     # 创建 我方海皇牙
     Kyogre01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Kyogre01.png", "../othersource/Pic/headPortraits/Kyogre01.png", 1, '海皇牙',
-                       400, 400, 120, 100, 150, 0, 100, 70, 80)
+                       400, 400, 133, 107, 150, 0, 80, 70, 80)
     Kyogre01.orderPos = (298, 272)
 
     # 创建 野生海皇牙
     Kyogre02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Kyogre02.png",  None, 2, '海皇牙',
-                       1000, 1000, 120, 100, 150, 0, 100, 637, 10)
+                       1000, 1000, 130, 96, 150, 0, 60, 637, 10)
 
     # 创建 技能组 对象
     Kyogre01.skills = (iceBeam01, tsunami01, waterfall01, kirin01)
@@ -495,12 +495,12 @@ def main():
     '''
     # 创建 我方皮卡丘
     Pikachu01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Pikachu01.png", "../othersource/Pic/headPortraits/Pikachu01.png", 1, '皮卡丘',
-                        230, 230, 120, 100, 150, 0, 100, 70, 80)
+                        230, 230, 85, 55, 150, 0, 40, 70, 80)
     Pikachu01.orderPos = (422, 272)
 
     # 创建 野生皮卡丘
     Pikachu02 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Pikachu.png", None,  2, '皮卡丘',
-                        230, 230, 120, 100, 150, 0, 100, 637, 10)
+                        230, 230, 80, 50, 150, 0, 30, 637, 10)
 
     # 创建 技能组 对象
     Pikachu01.skills = (knock01, kirin01, fireBeam01, lightning01)
@@ -515,7 +515,7 @@ def main():
 
     # 创建 我方风速狗
     Arcanine01 = Pokemon(p_setting, screen, clock, menubar, "../othersource/Pic/Arcanine01.png", None, 1, '风速狗',
-                         400, 400, 120, 100, 150, 0, 20, 70, 80)
+                         400, 400, 117, 100, 150, 0, 20, 70, 80)
 
     # 创建 技能组 对象
     Arcanine01.skills = (tsunami01, fireBeam01, kirin01, lightning01)
@@ -552,7 +552,7 @@ def main():
     myPokemon01s = Pokemons([])
 
     '''改动！！！！！！！！'''
-    maxLevel = 6
+    maxLevel = 8
     level = 1   # 记录玩家所在关卡
     # 每一关对应的boss，嵌套列表
     bosses = [[Zigzagoon02], [Pikachu02, Charizard02],
@@ -593,8 +593,9 @@ def main():
     coinsPrize = CoinsPrize(screen)
 
     # 每关可能获得的奖励
-    prizes = (upgradeHp, upgradeAtt, upgradeDam, upgradeDef, healAll,
-              upgradeStr, degradeHp, degradeAtt, degradeDef, coinsPrize)
+    prizes = (upgradeHp, upgradeAtt, upgradeDam, upgradeDef, healAll,upgradeStr, degradeHp, degradeAtt, degradeDef, coinsPrize)
+    prizes = (degradeHp, degradeHp, degradeHp, degradeHp, degradeHp, degradeHp, degradeHp, degradeHp,)
+
     # 商店售卖的商品
     storeGoods = (upgradeHp, upgradeAtt, upgradeDam, upgradeDef,
                   healAll, upgradeStr, degradeHp, degradeAtt, degradeDef)
@@ -778,33 +779,34 @@ def main():
 
                 level += 1
 
+                # 治疗玩家的宠物 恢复技能pp 重置pokemon的各项属性
+                myPokemon01s.reset()
+                gf.healPokemons(myPokemon01s.myPokemon01s)
                 pokemon01.initSkills()
 
-                # 重置pokemon01
-                # pokemon01 = myPokemon01s.myPokemon01s[0]
+                print(pokemon01.attack)
 
                 if level < maxLevel+1:
-                    coins = gf.drawGetCoins(
-                        screen, level, coins, clock)  # 硬币数待定
-                    pygame.time.delay(1000)
-                    # 选奖励or查看pokemons
+                    enemyPokemon02s = bosses[level - 1]
 
+                    # 金币奖励
+                    coins = gf.drawGetCoins(screen, level, coins, clock)  # 硬币数待定
+                    pygame.time.delay(1000)
+
+                    # 选奖励or查看pokemons
                     pygame.mixer.music.stop()
                     pygame.mixer.music.load("../othersource/Music/Prize.mp3")
                     pygame.mixer.music.play(-1, 0.0)
-
                     getMoney = gf.choosePrize(
-                        screen, prizes, myPokemon01s.myPokemon01s, coins, clock)
+                        screen, prizes, myPokemon01s.myPokemon01s, enemyPokemon02s, coins, clock)
                     # 如果选了100金币奖励
                     if getMoney:
                         coins += getMoney
+
                     # 每三关进商店买东西
                     cost = gf.store(screen, level, coins,
                                     storeGoods, myPokemon01s.myPokemon01s, clock)
-                    if cost:
-                        coins -= cost
-                    # 治疗玩家的宠物
-                    gf.healPokemons(myPokemon01s.myPokemon01s)
+                    if cost: coins -= cost
 
                     if selectTime < 5:
                         tmpPokemons = Pokemons([])
@@ -815,19 +817,14 @@ def main():
                                                  pokemonPointer, tmpPokemons.myPokemon01s, selectTime, clock, coins)
                         myPokemon01s.myPokemon01s.append(
                             tmpPokemons.myPokemon01s[0])
-                        # print(myPokemon01s.myPokemon01s[selectTime].name)
                         selectTime += 1
                     # 下一关or查看pokemons
                     gf.drawNextLevel(
                         screen, level, myPokemon01s.myPokemon01s, coins, clock)
-                    '''查看pokemon'''
-                    # print(myPokemon01s.myPokemon01s)
                     pygame.time.delay(1500)
-                    enemyPokemon02s = bosses[level-1]
                     pokemon01 = myPokemon01s.myPokemon01s[0]
                     pokemon02 = enemyPokemon02s[0]
                     gf.setFight(pokemon01, pokemon02)
-
                     # 更新技能栏、血条、状态栏信息
                     statebar02.pokemon = pokemon02
                     statebar01.pokemon = pokemon01
@@ -840,8 +837,7 @@ def main():
                     pointer.pokemon01 = pokemon01
                     menubar.rect.x = -500
 
-                    pygame.mixer.music.load(
-                        "../othersource/Music/battle0"+str(level)+".mp3")
+                    pygame.mixer.music.load("../othersource/Music/battle0"+str(level)+".mp3")
                     pygame.mixer.music.play(-1, 0.0)
                     # 下一关开始 菜单栏右移进入  野生pokemon左移进入
                     for i in range(140):

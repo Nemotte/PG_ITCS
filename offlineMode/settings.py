@@ -11,8 +11,8 @@ class Setting():
             "../othersource/Pic/selection_03.jpg"), pygame.image.load("../othersource/Pic/selection_04.jpg"), pygame.image.load("../othersource/Pic/selection_05.jpg")]
         self.mode_bg = pygame.image.load("../othersource/Pic/select_mode.jpg")
         self.loadingPage = pygame.image.load("../othersource/Pic/loadingPage.png")
-        self.loadPage = [pygame.image.load("../othersource/Pic/loadingPage01.png"), pygame.image.load("../othersource/Pic/loadingPage02.png"), pygame.image.load(
-            "../othersource/Pic/loadingPage03.png"), pygame.image.load("../othersource/Pic/loadingPage04.png"), pygame.image.load("../othersource/Pic/loadingPage05.png"), ]
+        self.loadPage = [pygame.image.load("../othersource/Pic/loadingPage01.jpg"), pygame.image.load("../othersource/Pic/loadingPage02.jpg"), pygame.image.load(
+            "../othersource/Pic/loadingPage03.jpg"), pygame.image.load("../othersource/Pic/loadingPage04.jpg"), pygame.image.load("../othersource/Pic/loadingPage05.jpg"), ]
 
         self.mainFont = "../othersource/font/SiYuanMedium.otf"
 
