@@ -861,8 +861,10 @@ def main():
                     # 通过了最后一关
                     screen.blit(pygame.image.load(
                         "../othersource/Pic/game_over.jpg"), (0, 0))
+                    pygame.mixer.music.load("../othersource/Music/finalWin.mp3")
+                    pygame.mixer.music.play(1, 0.0)
                     pygame.display.update()
-                    pygame.time.delay(1000)
+                    pygame.time.delay(7000)
                     sys.exit()
             else:
                 # 这一关的boss不只一个，换下一个boss
