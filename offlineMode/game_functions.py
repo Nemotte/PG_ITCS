@@ -232,7 +232,7 @@ def drawStore(screen, storeGoods, coins, myPokemon01s, clock):
                 if event.key == ord('b'):
                     return cost
                 elif event.key == ord('p'):
-                    checkPokemon01s(screen, myPokemon01s)
+                    checkPokemon01s(screen, myPokemon01s, clock)
                 elif event.key == pygame.K_LEFT:
                     storePointer.moveLeft()
                 elif event.key == pygame.K_RIGHT:

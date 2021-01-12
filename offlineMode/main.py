@@ -594,7 +594,6 @@ def main():
 
     # 每关可能获得的奖励
     prizes = (upgradeHp, upgradeAtt, upgradeDam, upgradeDef, healAll,upgradeStr, degradeHp, degradeAtt, degradeDef, coinsPrize)
-    prizes = (degradeHp, degradeHp, degradeHp, degradeHp, degradeHp, degradeHp, degradeHp, degradeHp,)
 
     # 商店售卖的商品
     storeGoods = (upgradeHp, upgradeAtt, upgradeDam, upgradeDef,

@@ -175,10 +175,8 @@ class Powerup(object):
     def use(self):
         self.powerupMove()
         self.nowPP -= 1
-        if self.pokemon.attack < self.pokemon.level * 5:
-            self.pokemon.attack *= 2.5 * self.index
-        if self.pokemon.defence < self.pokemon.level * 5:
-            self.pokemon.defence *= 1.4 * self.index
+        self.pokemon.attack *= 1.4 * self.index
+        self.pokemon.defence *= 1.4 * self.index
     # def
 
 

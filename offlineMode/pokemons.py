@@ -17,6 +17,7 @@ class Pokemon(pygame.sprite.Sprite):
         self.name = name
         self.health = health
         self.maxHealth = maxHealth
+        self.normalHea=maxHealth
         self.normalAtt = attack
         self.attack = attack
         self.normalDef = defence
@@ -93,15 +94,20 @@ class Pokemons():
         self.skills = list(set(self.skills))
 
     def allFailed(self):
-        # 查看是否玩家的所有pokemon都死了
+        # 查看是否玩家的所有pokemon都战败了
         for pokemon in self.myPokemon01s:
             if pokemon.alive:
                 return False
         return True
 
-    # def useHpBuff(self):
-    #     for pokemon in self.myPokemon01s:
-    #         pokemon.maxHealth = int(pokemon.maxHealth*0.05)
-    # def useAttBuff(self):
-    #     for pokemon in self.myPokemon01s:
-    #         pokemon.normalAtt = int(pokemon.normalAtt*0.05)
+    def reset(self):
+        self.updateSkills()
+        # 使用buff一关后，重置pokemon的各项属性
+        for pokemon in self.myPokemon01s:
+            pokemon.attack = pokemon.normalAtt
+            pokemon.maxHealth = pokemon.normalHea
+            pokemon.defence = pokemon.normalDef
+        for skill in self.skills:
+            skill.damage = skill.normalDam
+            if skill.name in ("剑舞", "力量提升"):
+                skill.index = 1
