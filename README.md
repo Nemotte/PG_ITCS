@@ -16,9 +16,10 @@ PokemonGame
 │   │  ├─font
 │   │  ├─Pic
 │   │  └─SkillsImage
-│   ├─hidingMode                    //三种模式，入口为offlineMode
+│   ├─hidingMode                    //四种模式，入口为offlineMode
 │   ├─offlineMode
-│   └─onlineMode
+│   ├─onlineMode
+│   └─trainingMode
 ├─tags                              //历史版本存放
 └─branches
     ├─Server                        //远程服务器使用的脚本
